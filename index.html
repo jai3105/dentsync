@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DentSync - Dental Practice Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#5D3EAF',
+                '50': '#F3F0FE',
+                '100': '#EBE5FD',
+                '200': '#D8CCFB',
+                '300': '#C4B2F9',
+                '400': '#B199F7',
+                '500': '#9D7FF5',
+                '600': '#8966F3',
+                '700': '#5D3EAF',
+                '800': '#4A328C',
+                '900': '#382569',
+                '950': '#251946'
+              },
+              secondary: {
+                DEFAULT: '#FDB813',
+                '50': '#FEF9E7',
+                '100': '#FDF2D0',
+                '200': '#FCE6A0',
+                '300': '#FBDA70',
+                '400': '#FACD40',
+                '500': '#F9C110',
+                '600': '#E0AC0F',
+                '700': '#B78D0C',
+                '800': '#8E6E0A',
+                '900': '#644F07',
+                '950': '#3B2F04'
+              },
+              "dark-text": "#334155",
+              "light-bg": "#f8f9fa",
+            }
+          }
+        },
+        plugins: [
+          function({ addUtilities }) {
+            addUtilities({
+              '.pointer-events-auto': { 'pointer-events': 'auto' },
+              '.pointer-events-none': { 'pointer-events': 'none' },
+            })
+          }
+        ]
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body {
+          font-family: 'Inter', sans-serif;
+          background-color: #f0f2f5;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #aab;
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #889;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          background-color: white !important;
+        }
+      }
+      input:not([type="checkbox"]):not([type="radio"]), 
+      textarea, 
+      select {
+        background-color: white !important;
+        color: #1e293b !important; /* slate-800 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-dom": "https://esm.sh/react-dom@^19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0",
+    "jspdf": "https://esm.sh/jspdf@^3.0.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@^5.0.2",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "firebase/": "https://esm.sh/firebase@^11.10.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
